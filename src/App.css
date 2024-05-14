@@ -3,11 +3,13 @@
   padding: 0px;
   box-sizing: border-box;
 }
+
 .App{
   padding: 20px;
   text-align: center;
+  padding-bottom: 200px;
 }
+
 .title{
   margin-bottom: 20px;
-  text-align: center;
 }

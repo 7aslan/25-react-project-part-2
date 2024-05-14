@@ -1,35 +1,36 @@
-import "./style.css"
-function Pagination({ currentPage, totalPage = 10, pageOnChange }) {
-  function noOfPages() {
+function Pagination({ currentPage, totalPages = 10, onPageChange }) {
+  function generateNoOfPages() {
     const pages = [];
-    for (let i = 1; i <= totalPage; i++) {
+
+    for (let i = 1; i <= totalPages; i++) {
       pages.push(i);
     }
+
     return pages;
   }
 
   return (
     <div className="pagination">
       <button
-        onClick={() => pageOnChange(currentPage - 1)}
+        onClick={() => onPageChange(currentPage - 1)}
         className="pagination-btn"
         disabled={currentPage === 1}
       >
         Prev
       </button>
-      {noOfPages().map((pageNo) => (
+      {generateNoOfPages().map((pageNo) => (
         <button
-          className={`pagination-btn ${currentPage === pageNo ? 'active': '' }`}
+          className={`pagination-btn ${currentPage === pageNo ? 'active' :''}`}
           key={pageNo}
-          onClick={() => pageOnChange(pageNo)}
+          onClick={() => onPageChange(pageNo)}
         >
           {pageNo}
         </button>
       ))}
       <button
-        onClick={() => pageOnChange(currentPage + 1)}
+        onClick={() => onPageChange(currentPage + 1)}
         className="pagination-btn"
-        disabled={currentPage === totalPage}
+        disabled={currentPage === totalPages}
       >
         Next
       </button>
