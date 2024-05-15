@@ -2,6 +2,7 @@ import "./App.css";
 import CountdownTimerTest from "./components/countdown-timer/test";
 import DigitalClock from "./components/digital-clock";
 import PaginationTest from "./components/pagination/test";
+import RandomQuoteGenerator from "./components/random-quote-generator";
 import StepProgressBarTest from "./components/step-progress-bar/test";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <DigitalClock />
       <CountdownTimerTest />
       <StepProgressBarTest />
+      <RandomQuoteGenerator />
     </div>
   );
 }

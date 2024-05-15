@@ -1,0 +1,31 @@
+.random-quote-generator{
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.quote-wrapper{
+    margin: 15px 0px;
+    font-size: 20px;
+    background-color: yellow;
+    border-radius: 5px;
+    padding: 40px;
+    color: #fefefe;
+    font-weight: bold;
+}
+.quote-wrapper p{
+    margin-bottom: 10px;
+}
+.refresh-btn{
+    padding: 15px;
+    background-color: yellow;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 15px;
+    border-style: none;
+    margin-top: 5px;
+}
+
+
+
