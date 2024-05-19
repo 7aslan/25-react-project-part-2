@@ -5,6 +5,7 @@ import DigitalClock from "./components/digital-clock";
 import FilterProducts from "./components/filter-products";
 import MusicPlayer from "./components/music-player";
 import PaginationTest from "./components/pagination/test";
+import ProgressBar from "./components/progress-bar";
 import RandomQuoteGenerator from "./components/random-quote-generator";
 import StepProgressBarTest from "./components/step-progress-bar/test";
 import TipCalculator from "./components/tip-calculator";
@@ -24,6 +25,7 @@ function App() {
       <FilterProducts />
       <TipCalculator />
       <MusicPlayer />
+      <ProgressBar />
     </div>
   );
 }
