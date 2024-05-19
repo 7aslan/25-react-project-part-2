@@ -3,6 +3,7 @@ import CountdownTimerTest from "./components/countdown-timer/test";
 import CurrencyConverter from "./components/currency-converter";
 import DigitalClock from "./components/digital-clock";
 import FilterProducts from "./components/filter-products";
+import MusicPlayer from "./components/music-player";
 import PaginationTest from "./components/pagination/test";
 import RandomQuoteGenerator from "./components/random-quote-generator";
 import StepProgressBarTest from "./components/step-progress-bar/test";
@@ -22,6 +23,7 @@ function App() {
       <CurrencyConverter />
       <FilterProducts />
       <TipCalculator />
+      <MusicPlayer />
     </div>
   );
 }
