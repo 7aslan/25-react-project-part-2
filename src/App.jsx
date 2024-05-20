@@ -4,6 +4,7 @@ import ButtonRippleEffect from "./components/button-ripple-effect";
 import CountdownTimerTest from "./components/countdown-timer/test";
 import CurrencyConverter from "./components/currency-converter";
 import DigitalClock from "./components/digital-clock";
+import DragAndDropFeature from "./components/drag-and-drop";
 import FilterProducts from "./components/filter-products";
 import MusicPlayer from "./components/music-player";
 import PaginationTest from "./components/pagination/test";
@@ -30,6 +31,7 @@ function App() {
       <ProgressBar />
       <BMICalculator />
       <ButtonRippleEffect />
+      <DragAndDropFeature />
     </div>
   );
 }
