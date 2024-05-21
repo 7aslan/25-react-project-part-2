@@ -11,6 +11,7 @@ import FormValidation from "./components/form-validation";
 import MusicPlayer from "./components/music-player";
 import PaginationTest from "./components/pagination/test";
 import ProgressBar from "./components/progress-bar";
+import Quiz from "./components/quiz-app";
 import RandomQuoteGenerator from "./components/random-quote-generator";
 import StepProgressBarTest from "./components/step-progress-bar/test";
 import TipCalculator from "./components/tip-calculator";
@@ -36,6 +37,7 @@ function App() {
       <DragAndDropFeature />
       <FormValidation />
       <FileUpload />
+      <Quiz />
     </div>
   );
 }
