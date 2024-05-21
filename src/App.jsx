@@ -6,6 +6,7 @@ import CurrencyConverter from "./components/currency-converter";
 import DigitalClock from "./components/digital-clock";
 import DragAndDropFeature from "./components/drag-and-drop";
 import FilterProducts from "./components/filter-products";
+import FormValidation from "./components/form-validation";
 import MusicPlayer from "./components/music-player";
 import PaginationTest from "./components/pagination/test";
 import ProgressBar from "./components/progress-bar";
@@ -32,6 +33,7 @@ function App() {
       <BMICalculator />
       <ButtonRippleEffect />
       <DragAndDropFeature />
+      <FormValidation />
     </div>
   );
 }
