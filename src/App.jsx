@@ -11,6 +11,7 @@ import FormValidation from "./components/form-validation";
 import MusicPlayer from "./components/music-player";
 import NestedComments from "./components/nested-comments";
 import PaginationTest from "./components/pagination/test";
+import PdfViewer from "./components/pdf-viewer";
 import ProgressBar from "./components/progress-bar";
 import Quiz from "./components/quiz-app";
 import RandomQuoteGenerator from "./components/random-quote-generator";
@@ -40,6 +41,7 @@ function App() {
       <FileUpload />
       <Quiz />
       <NestedComments />
+      <PdfViewer />
     </div>
   );
 }
