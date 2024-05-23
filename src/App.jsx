@@ -9,6 +9,7 @@ import FileUpload from "./components/file-upload";
 import FilterProducts from "./components/filter-products";
 import FormValidation from "./components/form-validation";
 import MusicPlayer from "./components/music-player";
+import NestedComments from "./components/nested-comments";
 import PaginationTest from "./components/pagination/test";
 import ProgressBar from "./components/progress-bar";
 import Quiz from "./components/quiz-app";
@@ -38,6 +39,7 @@ function App() {
       <FormValidation />
       <FileUpload />
       <Quiz />
+      <NestedComments />
     </div>
   );
 }
