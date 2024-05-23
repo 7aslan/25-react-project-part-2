@@ -7,6 +7,7 @@ import DigitalClock from "./components/digital-clock";
 import DragAndDropFeature from "./components/drag-and-drop";
 import FileUpload from "./components/file-upload";
 import FilterProducts from "./components/filter-products";
+import FirebaseTodo from "./components/firebase-todo";
 import FormValidation from "./components/form-validation";
 import MusicPlayer from "./components/music-player";
 import NestedComments from "./components/nested-comments";
@@ -42,6 +43,7 @@ function App() {
       <Quiz />
       <NestedComments />
       <PdfViewer />
+      <FirebaseTodo />
     </div>
   );
 }
