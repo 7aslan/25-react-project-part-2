@@ -1,8 +1,12 @@
 import { useState } from "react";
 import {
+  auth,
   loginUsingEmailAndPassword,
   registerUsingEmailAndPassword,
 } from "../../firebase-config";
+import { useAuthState } from "react-firebase-hooks/auth";
+import FirebaseTodo from "../firebase-todo";
+import './firebase-auth.css'
 function Registeration({ formData, setFormData, handleRegister }) {
   return (
     <div className="register">
@@ -112,8 +116,8 @@ function UnauthPage() {
     email: "",
     password: "",
   });
+  const [user, loading, error] = useAuthState(auth);
 
-  console.log(registerFormData);
   function handleRegister() {
     const { name, email, password } = registerFormData;
     registerUsingEmailAndPassword(name, email, password);
@@ -130,7 +134,11 @@ function UnauthPage() {
         <button onClick={() => setIsLoginView(true)}>Login View</button>
       </div>
       {isLoginView ? (
-        <Login formData={loginFormData} setFormData={setLoginFormData} handleLogin={handleLogin} />
+        <Login
+          formData={loginFormData}
+          setFormData={setLoginFormData}
+          handleLogin={handleLogin}
+        />
       ) : (
         <Registeration
           formData={registerFormData}
@@ -138,6 +146,8 @@ function UnauthPage() {
           handleRegister={handleRegister}
         />
       )}
+      
+      {!user ? <FirebaseTodo /> : null}
     </div>
   );
 }

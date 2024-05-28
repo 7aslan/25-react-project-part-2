@@ -2,6 +2,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db, logout } from "../../firebase-config";
 import { useEffect, useState } from "react";
 import { collection, getDocs, query, where } from "firebase/firestore";
+import FirebaseTodo from "../firebase-todo";
 
 function AuthPage() {
   const [user, loading, error] = useAuthState(auth);
@@ -22,7 +23,7 @@ function AuthPage() {
     if (user) fetchUserDetails();
   }, [user, loading]);
 
-  console.log(userInfo);
+
 
   return (
     <div>
@@ -33,6 +34,7 @@ function AuthPage() {
           <p>User Email : {userInfo?.email}</p>
         </div>
       ) : null}
+      <FirebaseTodo authInfo={user} />
 
       <button onClick={logout}>Logout</button>
     </div>

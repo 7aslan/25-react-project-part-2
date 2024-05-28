@@ -8,7 +8,7 @@ import {
 import { deleteDoc, doc } from "firebase/firestore";
 import { db } from "../../firebase-config";
 
-function Todo({ todoItem, setCurrentEditedTodoID, setInputValue }) {
+function Todo({ todoItem, setCurrentEditedTodoID, setInputValue, authInfo }) {
   function handleDelete(getCurrentTodoID) {
     deleteDoc(doc(db, "todos", getCurrentTodoID));
   }
@@ -17,23 +17,27 @@ function Todo({ todoItem, setCurrentEditedTodoID, setInputValue }) {
       <ListItem>
         <ListItemText primary={todoItem?.todoItem?.todo} />
       </ListItem>
-      <Button
-        onClick={() => handleDelete(todoItem.id)}
-        variant="contained"
-        color="secondary"
-      >
-        Delete
-      </Button>
-      <Button
-        onClick={() => {
-          setCurrentEditedTodoID(todoItem.id);
-          setInputValue(todoItem.todoItem.todo);
-        }}
-        variant="contained"
-        color="info"
-      >
-        Edit
-      </Button>
+      {authInfo !== null ? (
+        <Button
+          onClick={() => handleDelete(todoItem.id)}
+          variant="contained"
+          color="secondary"
+        >
+          Delete
+        </Button>
+      ) : null}
+      {authInfo !== null ? (
+        <Button
+          onClick={() => {
+            setCurrentEditedTodoID(todoItem.id);
+            setInputValue(todoItem.todoItem.todo);
+          }}
+          variant="contained"
+          color="info"
+        >
+          Edit
+        </Button>
+      ) : null}
     </List>
   );
 }

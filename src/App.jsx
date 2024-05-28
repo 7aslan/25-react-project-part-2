@@ -44,7 +44,12 @@ function App() {
       <Quiz />
       <NestedComments />
       <PdfViewer />
-      <FirebaseTodo />
+      <FirebaseTodo
+        authInfo={{
+          user: "deneme",
+          email: "deneme@deneme.com",
+        }}
+      />
       <FirebaseAuth />
     </div>
   );

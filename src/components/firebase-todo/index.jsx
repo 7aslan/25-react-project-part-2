@@ -12,11 +12,11 @@ import {
 import { useEffect, useState } from "react";
 import { db } from "../../firebase-config";
 import Todo from "./todo";
-import './todo.css'
+import "./todo.css";
 
 const q = query(collection(db, "todos"), orderBy("timestamp", "desc"));
 
-function FirebaseTodo() {
+function FirebaseTodo({ authInfo = null }) {
   const [inputValue, setInputValue] = useState("");
   const [todos, setTodos] = useState([]);
   const [currentEditedTodoID, setCurrentEditedTodoID] = useState(null);
@@ -43,7 +43,7 @@ function FirebaseTodo() {
           timestamp: serverTimestamp(),
         });
     setInputValue("");
-    setCurrentEditedTodoID(null)
+    setCurrentEditedTodoID(null);
   }
 
   return (
@@ -68,14 +68,18 @@ function FirebaseTodo() {
         </Button>
       </form>
       <ul>
-        {todos && todos.length >0 ?
+        {todos && todos.length > 0 ? (
           todos.map((todoItem) => (
             <Todo
               setInputValue={setInputValue}
               setCurrentEditedTodoID={setCurrentEditedTodoID}
               todoItem={todoItem}
+              authInfo={authInfo}
             />
-          )): <h3>No todos available. Please add one...</h3>}
+          ))
+        ) : (
+          <h3>No todos available. Please add one...</h3>
+        )}
       </ul>
     </div>
   );
