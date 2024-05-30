@@ -3,6 +3,7 @@ import BMICalculator from "./components/bmi-calculator";
 import ButtonRippleEffect from "./components/button-ripple-effect";
 import CountdownTimerTest from "./components/countdown-timer/test";
 import CurrencyConverter from "./components/currency-converter";
+import DebounceApiCall from "./components/debounce";
 import DigitalClock from "./components/digital-clock";
 import DragAndDropFeature from "./components/drag-and-drop";
 import FileUpload from "./components/file-upload";
@@ -51,6 +52,7 @@ function App() {
         }}
       />
       <FirebaseAuth />
+      <DebounceApiCall />
     </div>
   );
 }
