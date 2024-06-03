@@ -18,6 +18,7 @@ import PdfViewer from "./components/pdf-viewer";
 import ProgressBar from "./components/progress-bar";
 import Quiz from "./components/quiz-app";
 import RandomQuoteGenerator from "./components/random-quote-generator";
+import SortData from "./components/sort-data";
 import StepProgressBarTest from "./components/step-progress-bar/test";
 import TipCalculator from "./components/tip-calculator";
 import TooltipTest from "./components/tooltip/test";
@@ -53,6 +54,7 @@ function App() {
       />
       <FirebaseAuth />
       <DebounceApiCall />
+      <SortData />
     </div>
   );
 }
