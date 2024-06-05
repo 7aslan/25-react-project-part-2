@@ -27,11 +27,15 @@ function MovieApp() {
       </div>
       {loading ? <h2>Fetching List of Movies... Please Wait! </h2> : null}
       <div className="movie-search-results-container">
-        {movieSearchResults && movieSearchResults.length > 0 && !loading
-          ? movieSearchResults.map((movieItem) => (
-              <MovieCard key={movieItem.id} movieItem={movieItem} />
-            ))
-          : null}
+        {movieSearchResults && movieSearchResults.length > 0 && !loading ? (
+          movieSearchResults.map((movieItem) => (
+            <MovieCard key={movieItem.id} movieItem={movieItem} />
+          ))
+        ) : (
+          <h1>
+            No movie result found! Please search something to get results
+          </h1>
+        )}
       </div>
     </div>
   );

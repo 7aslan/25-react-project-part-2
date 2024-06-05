@@ -26,7 +26,14 @@
   font-weight: bolder;
 }
 
-.movie-app .watch-list-details-container{
-    display: flex;
-    justify-content: space-between;
+.movie-app .watch-list-details-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.movie-app .watch-list-wrapper,
+.movie-app .watched-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }

@@ -1,4 +1,10 @@
+import { useContext } from "react";
+import { MovieContext } from "../context/GlobalState";
+
 function MovieCard({ movieItem, key }) {
+  const { handleAddMovieToWatchList, handleAddMovieToWatched, state } =
+    useContext(MovieContext);
+
   return (
     <div className="movie-card" key={key}>
       <div className="img">
@@ -17,8 +23,26 @@ function MovieCard({ movieItem, key }) {
         <h4>Original Title: {movieItem?.original_title}</h4>
       </div>
       <div className="buttons-wrapper">
-        <button>Add to Watchlist</button>
-        <button>Add to Watched</button>
+        <button
+          disabled={
+            state.watchList.findIndex((item) => item.id === movieItem.id) > -1
+              ? true
+              : false
+          }
+          onClick={() => handleAddMovieToWatchList(movieItem)}
+        >
+          Add to Watchlist
+        </button>
+        <button
+          disabled={
+            state.watched.findIndex((item) => item.id === movieItem.id) > -1
+              ? true
+              : false
+          }
+          onClick={() => handleAddMovieToWatched(movieItem)}
+        >
+          Add to Watched
+        </button>
       </div>
     </div>
   );
