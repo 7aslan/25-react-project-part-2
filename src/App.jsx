@@ -11,6 +11,7 @@ import FilterProducts from "./components/filter-products";
 import FirebaseAuth from "./components/firebase-auth";
 import FirebaseTodo from "./components/firebase-todo";
 import FormValidation from "./components/form-validation";
+import GoogleOAuthLogin from "./components/google-oauth-login";
 import MovieApp from "./components/movie-app";
 import MusicPlayer from "./components/music-player";
 import NestedComments from "./components/nested-comments";
@@ -57,6 +58,7 @@ function App() {
       <DebounceApiCall />
       <SortData />
       <MovieApp />
+      <GoogleOAuthLogin />
     </div>
   );
 }
